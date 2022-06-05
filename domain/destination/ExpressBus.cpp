@@ -1,6 +1,5 @@
 #include "Destination.cpp"
-#include "iostream"
-#include "vector"
+
 
 using namespace std;
 
@@ -14,7 +13,7 @@ public:
 
 
     void initBusInfoList(){
-        this->busInfoList.addBusInfo(BusInfo("송정33", initsongjungTime(), "과기원역", 30));
+        this->busInfoList.addBusInfo(BusInfo("송정33", initsongjungTime(), "과기원역", 38));
         this->busInfoList.addBusInfo(BusInfo("첨단09", initKITECHTime(), "한국생산기술연구원", 41));
     }
 

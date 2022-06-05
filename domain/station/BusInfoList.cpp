@@ -10,15 +10,9 @@ BusInfoList::BusInfoList() {
     this->busList = vector<BusInfo>();
 }
 
-
 void BusInfoList::addBusInfo(BusInfo busInfo) {
     this->busList.push_back(busInfo);
 }
-
-const vector<BusInfo> &BusInfoList::getBusList() const {
-    return busList;
-}
-
 
 BusInfo BusInfoList::findOptimalBus(CustomTime& customTime){
     int min_minutes = 1000000;
@@ -34,8 +28,6 @@ BusInfo BusInfoList::findOptimalBus(CustomTime& customTime){
 
     return this->busList.at(idx);
 }
-
-
 
 int BusInfoList::size() {
     return this->busList.size();
