@@ -7,7 +7,7 @@ public:
         initBusInfoList();
     }
     void initBusInfoList(){
-        this->busInfoList.addBusInfo(BusInfo("송정33", initsongjungTime(), "과기원역", 44));
+        this->busInfoList.addBusInfo(BusInfo("송정33 Songjeong33", initsongjungTime(), "GIST", 44));
     }
 
     string findOptimalResult(CustomTime& customTime){

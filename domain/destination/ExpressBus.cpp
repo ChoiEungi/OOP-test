@@ -12,9 +12,9 @@ public:
 
 
     void initBusInfoList(){
-        this->busInfoList.addBusInfo(BusInfo("매월16", initsongjungTime(), "과기원역", 36));
-        this->busInfoList.addBusInfo(BusInfo("첨단09", initKITECHTime(), "한국생산기술연구원", 41));
-        this->busInfoList.addBusInfo(BusInfo("운림51", initEtriTime(), "한국전자통신연구원",36));
+        this->busInfoList.addBusInfo(BusInfo("Maewol16", initsongjungTime(), "GIST", 36));
+        this->busInfoList.addBusInfo(BusInfo("Cheomdan09", initKITECHTime(), "Korea Institute of Industiral Technology", 41));
+        this->busInfoList.addBusInfo(BusInfo("Ullim51", initEtriTime(), "Electronics and Telecommunications Research Institute",36));
     }
 
     string findOptimalResult(CustomTime& customTime){
