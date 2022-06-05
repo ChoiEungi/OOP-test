@@ -1,3 +1,4 @@
+#pragma once
 #include "../station/BusInfo.h"
 #include "../station/BusInfoList.h"
 #include "iostream"

@@ -24,14 +24,29 @@ void Input::startInstruction(){
     printLine();
 }
 
-void Input::timeSelectInstruction(int selectionNumber) {
+vector<string> split(string sentence, char Separator)
+{
+    vector<string> answer;
+    stringstream ss(sentence);
+    string tmp;
+
+    while (getline(ss, tmp, Separator)) {
+        answer.push_back(tmp);
+    }
+    return answer;
+}
+
+CustomTime Input::timeSelectInstruction(int selectionNumber) {
     string timeString;
 
     cout << "When is the departure time of the ";
     cout << numberToTransportation(selectionNumber) << "?" << "(ex. 16:30)" << endl;
     cout << "Enter the Time: ";
     cin >> timeString;
-    cout <<timeString << endl;
+    const vector<string> &splitted = split(timeString, ':');
+    return CustomTime(stoi(splitted.at(0)), stoi(splitted.at(1)));
+
+//    cout << << endl;
 }
 
 void Input::printNumberSelectionDirection() {
@@ -42,12 +57,12 @@ void Input::printLine(){
     cout << "---------------------------------------------------------" << endl;
 }
 
-const char *Input::numberToTransportation(int selectionNumber) {
+string Input::numberToTransportation(int selectionNumber) {
     switch (selectionNumber) {
         case 1:
-            return "BUS";
+            return "Express Bus";
         case 2:
-            return "KTX";
+            return "Train";
         case 3:
             return "Airplane";
         default:

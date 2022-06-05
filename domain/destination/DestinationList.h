@@ -7,9 +7,14 @@
 #include "vector"
 #include "Destination.cpp"
 
+
 class DestinationList {
 private:
-    std::vector<Destination> destinationList;
+    vector<Destination*> destinationList;
+public:
+    DestinationList();
+    void addDestination(Destination& destination);
+    string selectDestination(int selectionNumber, CustomTime& time);
 
 };
 

@@ -1,21 +1,36 @@
 #include <iostream>
 #include "input/Input.h"
 #include "domain/destination/ExpressBus.cpp"
+#include "domain/destination/Airplane.cpp"
+#include "domain/destination/Train.cpp"
+#include "domain/destination/DestinationList.h"
+
+void initalizeData(DestinationList& d){
+    d.addDestination(*(new ExpressBus()));
+    d.addDestination(*(new Train()));
+    d.addDestination(*(new Airplane()));
+}
 
 int main() {
-    ExpressBus* expressBus = new ExpressBus();
-    CustomTime customTime = CustomTime(16, 0);
 
-    cout <<"---------최적 결과----------"<<endl;
-    cout << expressBus->findOptimalResult(customTime) << endl;
+    DestinationList d = DestinationList();
+    initalizeData(d);
 
-    cout<<endl;
-    cout <<"---------전체 결과----------"<<endl;
-    expressBus->findAllResult(customTime);
+    int inputSelectionNumber;
+    Input::startInstruction();
+    inputSelectionNumber = Input::inputSelectionNumber();
 
-//    int inputSelectionNumber;
-//    Input::startInstruction();
-//    inputSelectionNumber = Input::inputSelectionNumber();
-//    Input::timeSelectInstruction(inputSelectionNumber);
-//    return 0;
+    cout << inputSelectionNumber << endl;
+    CustomTime inputTime = Input::timeSelectInstruction(inputSelectionNumber);
+
+    const string &resultString = d.selectDestination(inputSelectionNumber - 1, inputTime);
+
+//    const string &first = d.selectDestination(, customTime);
+//    const string &second = d.selectDestination(1, customTime);
+//    const string &third = d.selectDestination(2, customTime);
+//
+    cout <<"---------Optimal Results----------"<<endl;
+    cout << resultString << endl;
+
+
 }

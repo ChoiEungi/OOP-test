@@ -7,6 +7,8 @@ using namespace std;
 class Airplane: public Destination{
 public:
     Airplane(){
+        this->busInfoList = BusInfoList();
+        initBusInfoList();
     }
 
 public:
@@ -49,4 +51,3 @@ private:
     }
 };
 
-};

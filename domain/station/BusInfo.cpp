@@ -42,8 +42,8 @@ CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
 
 std::string BusInfo::toString() {
     string optimalTime = this->optimalTime.toString();
-    string result = this->beginningBusStationName + "으로 " + optimalTime + "까지 도착해서 " + this->busName + "을 탑승해야 합니다.";
-
+//    string result = this->beginningBusStationName + "으로 " + optimalTime + "까지 도착해서 " + this->busName + "을 탑승해야 합니다.";
+    string result = "Take the city bus " + this->busName +" from " + this->beginningBusStationName + " at " + optimalTime + ".";
     return result;
 }
 

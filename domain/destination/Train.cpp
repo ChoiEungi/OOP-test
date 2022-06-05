@@ -2,6 +2,10 @@
 
 class Train : public Destination {
 public:
+    Train(){
+        this->busInfoList = BusInfoList();
+        initBusInfoList();
+    }
     void initBusInfoList(){
         this->busInfoList.addBusInfo(BusInfo("송정33", initsongjungTime(), "과기원역", 44));
     }
