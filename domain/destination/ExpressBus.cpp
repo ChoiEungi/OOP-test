@@ -13,7 +13,7 @@ public:
 
     void initBusInfoList(){
         this->busInfoList.addBusInfo(BusInfo("Maewol16", initsongjungTime(), "GIST", 36));
-        this->busInfoList.addBusInfo(BusInfo("Cheomdan09", initKITECHTime(), "Korea Institute of Industiral Technology", 41));
+        this->busInfoList.addBusInfo(BusInfo("Cheomdan09", initKITECHTime(), "Korea Institute of Industrial Technology", 41));
         this->busInfoList.addBusInfo(BusInfo("Ullim51", initEtriTime(), "Electronics and Telecommunications Research Institute",36));
     }
 
