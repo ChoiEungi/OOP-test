@@ -29,7 +29,6 @@ public:
             BusInfo &c = this->busInfoList.at(i);
             string basicString = c.toString();
             resultList.push_back(basicString);
-            cout << basicString << endl;
         }
 
         return resultList;

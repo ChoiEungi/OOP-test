@@ -50,7 +50,7 @@ CustomTime Input::timeSelectInstruction(int selectionNumber) {
 }
 
 void Input::printNumberSelectionDirection() {
-    cout << "Select the Number";
+    cout << "Select the Number ";
 }
 
 void Input::printLine(){
@@ -80,6 +80,7 @@ int Input::inputSelectionNumberTime() {
 void Input::leaveTimeInstruction(int selectionNumber) {
     cout<<"When will you take a City Bus from GIST?"<<endl;
     cout<<"1. Now" << endl;
+    cout<<"2. Input the future Time" << endl;
 }
 
 void Input::printNumberSelectionTime() {

@@ -23,12 +23,10 @@ CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
 
     for (int i = 0; i < this->busArrivalTimeList.size(); i++) {
         CustomTime busTime = this->busArrivalTimeList.at(i);
-//        std::cout<< busTime.toString() << std::endl;
 
         if (leastArrivalTime.isAfter(busTime)) break;
 
         int temp = leastArrivalTime.getAbsDiff(busTime);
-//        std::cout<< temp << std::endl;
 
         if (temp < min_val){
             idx = i;
@@ -42,7 +40,6 @@ CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
 
 std::string BusInfo::toString() {
     string optimalTime = this->optimalTime.toString();
-//    string result = this->beginningBusStationName + "으로 " + optimalTime + "까지 도착해서 " + this->busName + "을 탑승해야 합니다.";
     string result = "Take the city bus " + this->busName +" from " + this->beginningBusStationName + " at " + optimalTime + ".";
     return result;
 }

@@ -17,3 +17,8 @@ string DestinationList::selectDestination(int selectionNumber, CustomTime& custo
     const string &basicString = this->destinationList.at(selectionNumber)->findOptimalResult(customTime);
     return basicString;
 }
+
+vector<string> DestinationList::selectAllResults(int selectionNumber, CustomTime& customTime) {
+    vector<string> vector = this->destinationList.at(selectionNumber)->findAllResult(customTime);
+    return vector;
+}

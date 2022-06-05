@@ -15,6 +15,7 @@ public:
     DestinationList();
     void addDestination(Destination& destination);
     string selectDestination(int selectionNumber, CustomTime& time);
+    vector<string> selectAllResults(int selectionNumber, CustomTime& customTime);
 
 };
 
