@@ -14,7 +14,6 @@ public:
     BusInfo findOptimalBus(CustomTime& customTime);
     int size();
     BusInfo& at(int i);
-
 };
 
 

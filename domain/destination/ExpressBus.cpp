@@ -13,8 +13,9 @@ public:
 
 
     void initBusInfoList(){
-        this->busInfoList.addBusInfo(BusInfo("송정33", initsongjungTime(), "과기원역", 38));
+        this->busInfoList.addBusInfo(BusInfo("매월16", initsongjungTime(), "과기원역", 36));
         this->busInfoList.addBusInfo(BusInfo("첨단09", initKITECHTime(), "한국생산기술연구원", 41));
+        this->busInfoList.addBusInfo(BusInfo("운림51", initEtriTime(), "한국전자통신연구원",36));
     }
 
     string findOptimalResult(CustomTime& customTime){
@@ -60,5 +61,18 @@ private:
             KITECHTime.push_back(CustomTime(bustSixteenHourWeek[i], bustSixteenMinWeek[i]));
         }
         return KITECHTime;
+    }
+
+    vector<CustomTime> initEtriTime(){
+        vector<CustomTime> ETRITime;
+        ETRITime = vector<CustomTime>();
+        int size =88;
+        int busFiftyoneHourWeek[88] = {5,5,6,6,6,6,6,6,7,7,7,7,7,7,7,8,8,8,8,8,8,9,9,9,9,9,10,10,10,10,11,11,11,11,11,12,12,12,12,12,12,13,13,13,13,13,14,14,14,14,14,15,15,15,15,15,16,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18,19,19,19,19,20,20,20,20,20,21,21,21,21,21,22,22};
+        int busFiftyoneMinWeek[88] = {40,52,4,16,27,38,48,57,6,14,22,30,38,46,54,2,10,19,29,40,52,5,18,31,44,57,10,23,36,49,2,15,28,40,51,1,11,21,31,41,51,1,11,22,34,47,0,13,26,39,52,5,18,31,43,55,6,17,28,39,49,59,9,20,32,44,56,8,20,33,46,59,12,25,38,51,4,17,30,43,56,8,20,32,44,56,8,20};
+
+        for(int i=0; i<size;i++) {
+            ETRITime.push_back(CustomTime(busFiftyoneHourWeek[i], busFiftyoneMinWeek[i]));
+        }
+        return ETRITime;
     }
 };
