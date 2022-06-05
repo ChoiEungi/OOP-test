@@ -25,8 +25,17 @@ Then, `a.out` will be returned, this is executable file to run.
 - C++ 11
 
 ### Domain
-
+TBA
 
 
 ### Class Diagram
+TBA
 
+### Memeber
+20215117 심수연
+
+20205188 최은기
+
+
+### Previous Trial
+[Github Link](https://github.com/ChoiEungi/OOP-project)
