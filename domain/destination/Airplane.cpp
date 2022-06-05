@@ -43,9 +43,6 @@ private:
         for(int i=0; i<size; i++) {
             songjungTime.push_back(CustomTime(busThirtythreeHourWeek[i], busThirtythreeMinWeek[i]));
         }
-        for(int i=0; i<size; i++) {
-            songjungTime.push_back(CustomTime(busThirtythreeHourWeek[i], busThirtythreeMinWeek[i]));
-        }
         return songjungTime;
     }
 };
