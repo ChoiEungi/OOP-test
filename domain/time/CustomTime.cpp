@@ -93,8 +93,4 @@ int CustomTime::toMinute() {
     return this->hour * 60 + this->minutes;
 }
 
-bool CustomTime::isException() {
-    return this->hour==0 && this->minutes==0;
-}
-
 

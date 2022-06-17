@@ -17,7 +17,6 @@ public:
     int toMinute();
     CustomTime minusMinute(int minute);
     bool isAfter(CustomTime& c);
-    bool isException();
 };
 
 

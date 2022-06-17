@@ -47,7 +47,7 @@ std::string BusInfo::toString() {
     string optimalTime = this->optimalTime.toString();
 
     if (optimalTime == "0:00"){
-        return "There are no recommnedation. The time is too ";
+        return "There are no recommnedation. There are no buses on 0:00 to 6:00 am.";
     }
 
     string result = "Take the city bus " + this->busName +" from " + this->beginningBusStationName + " at " + optimalTime + ".";
