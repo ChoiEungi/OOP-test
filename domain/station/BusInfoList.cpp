@@ -16,10 +16,12 @@ void BusInfoList::addBusInfo(BusInfo busInfo) {
 
 BusInfo BusInfoList::findOptimalBus(CustomTime& customTime){
     int min_minutes = 1000000;
-    int idx;
+    int idx = 0;
 
     for(int i=0; i<this->busList.size(); i++){
-        int temp = this->busList.at(i).findRecommendationTime(customTime).toMinute();
+        CustomTime recommendationTime = this->busList.at(i).findRecommendationTime(customTime);
+
+        int temp = recommendationTime.toMinute();
         if (temp < min_minutes){
             idx = i;
             min_minutes = temp;

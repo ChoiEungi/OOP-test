@@ -9,7 +9,7 @@ BusInfo::BusInfo(std::string name, std::vector<CustomTime> busArrivalTimeList, s
     this->busArrivalTimeList = busArrivalTimeList;
     this->beginningBusStationName = beginningBusStationName;
     this->takenTime = takenTime;
-    this->optimalTime = CustomTime();
+    this->optimalTime = CustomTime(0, 0);
 }
 
 CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
@@ -17,7 +17,7 @@ CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
     int walkingTime = 10;
     CustomTime leastArrivalTime = beginningTime.minusMinute(this->takenTime + walkingTime);
 
-    int idx;
+    int idx = 0;
     int min_val = 1000000;
     CustomTime min_time;
 
@@ -34,12 +34,22 @@ CustomTime BusInfo::findRecommendationTime(CustomTime beginningTime) {
             min_time = busTime;
         }
     }
+
+    if (idx == 0){
+        return CustomTime(0, 0);
+    }
+
     this->optimalTime = min_time;
     return min_time;
 }
 
 std::string BusInfo::toString() {
     string optimalTime = this->optimalTime.toString();
+
+    if (optimalTime == "0:00"){
+        return "There are no recommnedation. The time is too ";
+    }
+
     string result = "Take the city bus " + this->busName +" from " + this->beginningBusStationName + " at " + optimalTime + ".";
     return result;
 }

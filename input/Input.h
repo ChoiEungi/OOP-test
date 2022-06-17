@@ -16,9 +16,7 @@ private:
 
 public:
     static int inputSelectionNumber();
-    static int inputSelectionNumberTime();
     static void startInstruction();
-    static void leaveTimeInstruction(int selectionNumber);
     static CustomTime timeSelectInstruction(int selectionNumber);
 };
 

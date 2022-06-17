@@ -45,8 +45,6 @@ CustomTime Input::timeSelectInstruction(int selectionNumber) {
     cin >> timeString;
     const vector<string> &splitted = split(timeString, ':');
     return CustomTime(stoi(splitted.at(0)), stoi(splitted.at(1)));
-
-//    cout << << endl;
 }
 
 void Input::printNumberSelectionDirection() {
@@ -68,19 +66,6 @@ string Input::numberToTransportation(int selectionNumber) {
         default:
             return "none";
     }
-}
-
-int Input::inputSelectionNumberTime() {
-    printNumberSelectionTime();
-    int inputNumber;
-    cin >> inputNumber;
-    return inputNumber;
-}
-
-void Input::leaveTimeInstruction(int selectionNumber) {
-    cout<<"When will you take a City Bus from GIST?"<<endl;
-    cout<<"1. Now" << endl;
-    cout<<"2. Input the future Time" << endl;
 }
 
 void Input::printNumberSelectionTime() {

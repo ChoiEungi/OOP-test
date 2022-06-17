@@ -14,6 +14,5 @@ public:
     virtual void initBusInfoList() = 0;
     virtual string findOptimalResult(CustomTime& customTime) =0;
     virtual vector<string> findAllResult(CustomTime& customTime) = 0;
-private:
 };
 

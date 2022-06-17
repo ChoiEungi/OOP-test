@@ -60,6 +60,9 @@ CustomTime CustomTime::minusMinute(int minute) {
         this->hour--;
         this->minutes = (this->minutes + 60) - minute;
     }
+    else{
+        this->minutes -= minute;
+    }
 
     return CustomTime(this->hour, this->minutes);
 }
@@ -79,7 +82,7 @@ bool CustomTime::isAfter(CustomTime &c) {
         return true;
     }
 
-    if(this->hour == c.hour && this->minutes < c.minutes){
+    if(this->hour == c.hour && this->minutes <= c.minutes){
         return true;
     }
 
@@ -88,6 +91,10 @@ bool CustomTime::isAfter(CustomTime &c) {
 
 int CustomTime::toMinute() {
     return this->hour * 60 + this->minutes;
+}
+
+bool CustomTime::isException() {
+    return this->hour==0 && this->minutes==0;
 }
 
 
